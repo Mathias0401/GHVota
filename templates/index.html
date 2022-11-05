@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GH Vota</title>
+    <link rel="stylesheet" href="../static/css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 class="header__title">VOTACIÓN GRAN HERMANO 2022</h1>
+        <h2 class="header__votos">
+          VOTOS TOTALES: <span class="votos">{{ variable }}</span>
+        </h2>
+      </header>
+      <main class="main">
+        <div class="main__container">
+          <div id="card-1" class="card">
+            <img src="../static/img/Perfil/Agustin.jpg" alt="Agustin" />
+            <form action="/voted" method="POST">
+              <input type="text" name="card" value="1" class="inp" />
+              <button class="voteBtn" type="submit"><h3>Agustin</h3></button>
+            </form>
+          </div>
+          <div id="card-2" class="card">
+            <img src="../static/img/Perfil/Alfa.jpg" alt="Alfa" />
+            <form action="/voted" method="POST">
+              <input type="text" name="card" value="2" class="inp" />
+              <button class="voteBtn" type="submit"><h3>Alfa</h3></button>
+            </form>
+          </div>
+          <div id="card-3" class="card">
+            <img src="../static/img/Perfil/Juan.jpg" alt="Juan" />
+            <form action="/voted" method="POST">
+              <input type="text" name="card" value="3" class="inp" />
+              <button class="voteBtn" type="submit"><h3>Juan</h3></button>
+            </form>
+          </div>
+          <div id="card-4" class="card">
+            <img src="../static/img/Perfil/Mora.jpg" alt="Mora" />
+            <form action="/voted" method="POST">
+              <input type="text" name="card" value="4" class="inp" />
+              <button class="voteBtn" type="submit"><h3>Mora</h3></button>
+            </form>
+          </div>
+          <div id="card-5" class="card">
+            <img src="../static/img/Perfil/Daniela.jpg" alt="Daniela" />
+            <form action="/voted" method="POST">
+              <input type="text" name="card" value="5" class="inp" />
+              <button class="voteBtn" type="submit"><h3>Daniela</h3></button>
+            </form>
+          </div>
+        </div>
+      </main>
+      <div class="porcentajeVotos">
+        <p>{{ primero }}%</p>
+        <p>{{ segundo }}%</p>
+        <p>{{ tercero }}%</p>
+        <p>{{ cuarto }}%</p>
+        <p>{{ quinto }}%</p>
+      </div>
+      <footer class="footer">
+        <h2 class="footer__text">
+          VOTACIÓN NO OFICIAL, HECHO MERAMENTE POR CURIOSIDAD
+        </h2>
+      </footer>
+    </div>
+    <script src="../static/js/script.js"></script>
+  </body>
+</html>

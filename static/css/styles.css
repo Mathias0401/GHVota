@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+/* font-family: 'Permanent Marker', cursive; */
+@import url("https://fonts.googleapis.com/css2?family=Vast+Shadow&display=swap");
+/* font-family: 'Vast Shadow', cursive; */
+@import url("https://fonts.googleapis.com/css2?family=Battambang&display=swap");
+/* font-family: 'Battambang', cursive; */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Battambang", cursive;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #0b0030;
+  background-image: url("../img/texture.png");
+  color: white;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr 0.5fr auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "votos"
+    "footer";
+}
+
+.porcentajeVotos {
+  width: 100%;
+  grid-area: votos;
+  display: flex;
+  justify-content: center;
+  column-gap: 5rem;
+  margin-top: 2.5rem;
+}
+
+.porcentajeVotos p {
+  width: 17rem;
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Vast Shadow", cursive;
+}
+
+.main {
+  grid-area: main;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.main__container {
+  display: flex;
+  justify-content: center;
+  column-gap: 5rem;
+}
+
+.card {
+  width: 17rem;
+  height: 20rem;
+  background-color: #1d1a2a;
+  border: solid 0.25rem #ffffff;
+  border-radius: 1rem;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  justify-items: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card h3 {
+  font-size: 2rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  grid-area: header;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.inp {
+  display: none;
+}
+
+.voteBtn {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: transparent;
+  color: white;
+}
+
+.voteBtn:hover,
+.voteBtn h3:hover {
+  transition: 0.5s;
+  cursor: pointer;
+  font-size: 2.75rem;
+  color: red;
+}
+
+.header,
+.footer {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__title,
+.header__votos {
+  font-family: "Vast Shadow", cursive;
+  font-size: 2.25rem;
+}
+
+.header__votos {
+  font-size: 1.75rem;
+}
+
+.votos {
+  color: lightgreen;
+  font-family: "Vast Shadow", cursive;
+}
+
+.footer__text {
+  font-size: 1.25rem;
+  font-family: "Vast Shadow", cursive;
+}
