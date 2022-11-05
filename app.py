@@ -46,9 +46,6 @@ def Index():
 def newVote():
     if request.method == 'POST':
 
-        """ip = jsonify({'ip': request.remote_addr}), 200
-        cur.execute('INSERT INTO ips (ip) VALUES (%s)', [ip]
-        )"""
         cur = mysql.connection.cursor()
         query = 'SELECT * FROM votos'
         cur.execute(query)
@@ -88,15 +85,6 @@ def newVote():
                 'UPDATE votos SET votos = %s WHERE id = 4', [str(votos)])
             cur.execute(
                 'UPDATE votos SET votos = %s WHERE id = 5', [str(totalVotos)])
-            mysql.connection.commit()
-        elif request.form['card'] == '5':
-            votos = result[4][1]
-            votos += 1
-            totalVotos = result[5][1] + 1
-            cur.execute(
-                'UPDATE votos SET votos = %s WHERE id = 5', [str(votos)])
-            cur.execute(
-                'UPDATE votos SET votos = %s WHERE id = 6', [str(totalVotos)])
             mysql.connection.commit()
     return redirect(url_for('Index'))
 
