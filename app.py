@@ -9,7 +9,7 @@ app = Flask(__name__)
 app.config['MYSQL_HOST'] = 'us-cdbr-east-06.cleardb.net'
 app.config['MYSQL_USER'] = 'bbf7220214418e'
 app.config['MYSQL_PASSWORD'] = '78d86c96'
-app.config['MYSQL_DB'] = 'ghvota'
+app.config['MYSQL_DB'] = 'heroku_acd89444b840722'
 
 mysql = MySQL(app)
 
