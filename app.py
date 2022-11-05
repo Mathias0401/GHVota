@@ -26,14 +26,12 @@ def Index():
         segundoPorc = round((100*result[1][1])/result[4][1], 2)
         tercerPorc = round((100*result[2][1])/result[4][1], 2)
         cuartoPorc = round((100*result[3][1])/result[4][1], 2)
-        quintoPorc = round((100*result[3][1])/result[4][1], 2)
     else:
         primerPorc = 0
         segundoPorc = 0
         tercerPorc = 0
         cuartoPorc = 0
-        quintoPorc = 0
-    return render_template('index.html', variable=totalVotos, primero=primerPorc, segundo=segundoPorc, tercero=tercerPorc, cuarto=cuartoPorc, quinto=quintoPorc)
+    return render_template('index.html', variable=totalVotos, primero=primerPorc, segundo=segundoPorc, tercero=tercerPorc, cuarto=cuartoPorc)
 
 
 """ @app.route('/')
